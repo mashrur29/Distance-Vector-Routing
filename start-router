@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo 'xterm -title "A" -hold -e "./dv_routing configA.txt A 2000 | tee routing-outputA.txt" & sleep 1
+xterm -title "B" -hold -e "./dv_routing configB.txt B 2001 | tee routing-outputB.txt" & sleep 1
+xterm -title "C" -hold -e "./dv_routing configC.txt C 2002 | tee routing-outputC.txt" & sleep 1
+xterm -title "D" -hold -e "./dv_routing configD.txt D 2003 | tee routing-outputD.txt" & sleep 1
+xterm -title "E" -hold -e "./dv_routing configE.txt E 2004 | tee routing-outputE.txt" & sleep 1
+xterm -title "F" -hold -e "./dv_routing configF.txt F 2005 | tee routing-outputF.txt" & sleep 1' | shuf > exec
+chmod 777 exec
+./exec
+rm exec
