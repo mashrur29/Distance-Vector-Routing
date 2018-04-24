@@ -171,8 +171,7 @@ bool DV::timerExpired(node &n) const {
 
     if (((double)tend.tv_sec + 1.0e-9*tend.tv_nsec) - ((double)n.startTime.tv_sec + 1.0e-9*n.startTime.tv_nsec) > 5)
         return true;
-    else
-        return false;
+    else return false;
 }
 
 //-----------------
